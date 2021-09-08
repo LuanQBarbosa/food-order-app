@@ -11,9 +11,13 @@ const Cart = ({ onClose }) => {
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
-  const cardItemRemoveHandler = (id) => {};
+  const cardItemRemoveHandler = (id) => {
+    cartCtx.removeItem(id);
+  };
 
-  const cardItemAddHandler = (item) => {};
+  const cardItemAddHandler = (item) => {
+    cartCtx.addItem({ ...item, amount: 1 });
+  };
   
   const cartItems = cartCtx.items.map((item) => 
     <CartItem
