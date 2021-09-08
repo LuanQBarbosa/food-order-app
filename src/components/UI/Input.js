@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './Item.module.css';
+import classes from './Input.module.css';
 
 const Input = ({ label, input }) => {
   return (
